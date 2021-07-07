@@ -32,7 +32,7 @@ const TweetBox = () => {
   };
   return (
     <div className="tweetBox">
-      <h4>{`${currentUser.displayName}`}</h4>
+      {/* <h4>{`${currentUser.displayName}`}</h4> */}
       <form>
         <div className="tweetBox__input">
           <Avatar src={currentUser.photoURL} />

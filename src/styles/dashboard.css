@@ -1,10 +1,128 @@
 .dashboard {
-  display: flex;
-  /* justify-items: center; */
   height: 100vh;
+  /* display: flex;
+  /* justify-items: center; */
+  /* height: 100vh;
   width: 100vh;
-  max-width: 1300px;
+  max-width: 1300px; */
   /* margin-left: auto;
   margin-right: auto; */
   /* border: solid yellow; */
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 200px 1fr 1fr;
+}
+
+@media screen and (max-width: 1000px) {
+  #imageGrid {
+    display: none;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #sidebar {
+    display: none;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+.item {
+  /* height: 100vh; */
+  background-color: red;
+  border: solid black;
+
+  overflow-y: auto;
+  max-height: 100vh;
+}
+
+.item::-webkit-scrollbar {
+  display: none;
+}
+
+.navToggle {
+  position: fixed;
+  align-content: center;
+  z-index: 1;
+  /* border: solid black; */
+}
+
+.navToggle__twitterIcon {
+  color: var(--twitter-color);
+  font-size: 30px !important;
+  margin-left: 20px;
+  margin-top: 10px;
+  /* margin-left: 20px;
+  margin-bottom: 20px; */
+}
+
+.gridFeed {
+  display: flex;
+  flex-direction: column;
+
+  /* flex: 0.4; */
+  /* width: 100%; */
+  border-right: var(--twitter-background) 1px solid;
+  /* min-width: fit-content; */
+  overflow-y: scroll;
+  overflow-x: hidden;
+  /* 
+    max-width: 100vw; */
+}
+
+.dashboard__twitterIcon {
+  position: fixed;
+  margin: 20px;
+  color: var(--twitter-color);
+  font-size: 30px !important;
+  /* margin-left: 20px; */
+  margin-bottom: 20px;
+  border: solid, black;
+  z-index: 300;
+  visibility: hidden;
+}
+
+@media screen and (max-width: 600px) {
+  .dashboard__twitterIcon {
+    visibility: visible;
+  }
+
+  #sidebar {
+    position: fixed;
+    border: magenta;
+  }
+
+  /* #sidebar {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+  } */
+}
+
+#showSideBar {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+}
+
+#sidebar {
+  background-color: lightblue;
+}
+
+#feed {
+  background-color: lightgreen;
+}
+
+.container {
+  background-color: black;
 }

@@ -1,12 +1,12 @@
 .post__body > img {
   border-radius: 20px;
-  max-width: 300px;
-  /* max-width: 200px; */
+  /* max-width: 300px; */
+  width: 100%;
 }
 
 .post {
   display: flex;
-
+  max-width: 500px;
   align-items: flex-start;
   border-bottom: 1px solid var(--twitter-background);
 }
@@ -35,6 +35,8 @@
   margin-bottom: 20px;
 }
 .post__body {
+  display: flex;
+  flex-direction: column;
   flex: 1;
   padding: 10px;
 }

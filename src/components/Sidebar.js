@@ -1,6 +1,7 @@
 // import "../styles/sidebar.css"
-import SidebarOption  from "./SidebarOption"
-import "../styles/Sidebar.css"
+import React, { useState } from "react";
+import SidebarOption from "./SidebarOption";
+import "../styles/Sidebar.css";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import HomeIcon from "@material-ui/icons/Home";
 import SearchIcon from "@material-ui/icons/Search";
@@ -12,12 +13,17 @@ import PermIdentityIcon from "@material-ui/icons/PermIdentity";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 import { Button } from "@material-ui/core";
 
-
-
 const Sidebar = () => {
-    return (
-        <div className="sidebar">
-        <TwitterIcon className="sidebar__twitterIcon"/>
+  const [showNav, setShowNav] = useState(true);
+
+  return (
+    <div className="sidebar">
+      {/* <TwitterIcon
+        onClick={(e) => setShowNav(!showNav)}
+        className="sidebar__twitterIcon"
+      /> */}
+
+      <div className="nav">
         <SidebarOption Icon={HomeIcon} text="Home" active={true} />
         <SidebarOption Icon={SearchIcon} text="Explore" />
         <SidebarOption Icon={NotificationsNoneIcon} text="Notifications" />
@@ -27,12 +33,12 @@ const Sidebar = () => {
         <SidebarOption Icon={PermIdentityIcon} text="Profile" />
         <SidebarOption Icon={MoreHorizIcon} text="More" />
 
-      <Button variant="outlined" className="sidebar__tweet" fullWidth>
-            tweet
+        <Button variant="outlined" className="sidebar__tweet" fullWidth>
+          tweet
+        </Button>
+      </div>
+    </div>
+  );
+};
 
-    </Button>
-        </div>
-    )
-}
-
-export default Sidebar
+export default Sidebar;

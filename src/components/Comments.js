@@ -5,7 +5,7 @@ import "../styles/comment.css";
 const Comments = ({ comments }) => {
   //   const data = Array(comments);
   // console.log(comments);
-  const amountOfComments = comments.length;
+
   //   console.log(JSON.parse(JSON.stringify(comments)));
   return (
     <div className="comments">
