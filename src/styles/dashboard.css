@@ -38,8 +38,6 @@
 }
 .item {
   /* height: 100vh; */
-  background-color: red;
-  border: solid black;
 
   overflow-y: auto;
   max-height: 100vh;
@@ -98,7 +96,6 @@
 
   #sidebar {
     position: fixed;
-    border: magenta;
   }
 
   /* #sidebar {
@@ -115,7 +112,7 @@
   background-color: white;
 }
 
-#sidebar {
+/* #sidebar {
   background-color: lightblue;
 }
 
@@ -125,4 +122,4 @@
 
 .container {
   background-color: black;
-}
+} */
