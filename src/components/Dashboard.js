@@ -56,7 +56,7 @@ const Dashboard = () => {
       />
       <div className="container">
         {/* <div className="item"></div> */}
-        <div id="sidebar" id={showNav ? "showSideBar" : "sidebar"}>
+        <div id={showNav ? "showSideBar" : "sidebar"}>
           <Sidebar />
         </div>
         {/* {!showNav && */}
