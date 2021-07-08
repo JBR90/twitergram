@@ -1,0 +1,18 @@
+//Abstract
+@import "src/sass/abstracts/_variables.scss";
+@import "src/sass/abstracts/_mixins.scss";
+
+// Base
+@import "src/sass/base/_base.scss";
+@import "src/sass/base/_base.scss";
+
+// Layout
+@import "src/sass/layout/_dashboard.scss";
+
+//Components
+@import "src/sass/components/_comment.scss";
+@import "src/sass/components/_feed.scss";
+@import "src/sass/components/_post.scss";
+@import "src/sass/components/_sidebar.scss";
+@import "src/sass/components/_tweetBox.scss";
+@import "src/sass/components/_tweetComments.scss";

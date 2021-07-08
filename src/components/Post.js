@@ -8,7 +8,7 @@ import {
   Repeat,
   VerifiedUser,
 } from "@material-ui/icons";
-import "../styles/Post.css";
+// import "../styles/Post.css";
 import firebase from "firebase/app";
 import db from "../services/firebase";
 

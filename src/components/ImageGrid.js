@@ -1,54 +1,31 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import GridList from "@material-ui/core/GridList";
-import GridListTile from "@material-ui/core/GridListTile";
-// import tileData from "./tileData";
+import { motion } from "framer-motion";
+import db from "../services/firebase";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "space-around",
-    overflow: "hidden",
-    backgroundColor: theme.palette.background.paper,
-  },
-  gridList: {
-    width: 500,
-    height: 450,
-  },
-}));
-
-/**
- * The example data is structured as follows:
- *
- * import image from 'path/to/image.jpg';
- * [etc...]
- *
- * const tileData = [
- *   {
- *     img: image,
- *     title: 'Image',
- *     author: 'author',
- *     cols: 2,
- *   },
- *   {
- *     [etc...]
- *   },
- * ];
- */
-export default function ImageGrid() {
-  const classes = useStyles();
+export default function ImageGrid({ setSelectedImg }) {
+  const docs = db.collection("posts");
 
   return (
-    <div className={classes.root}>
-      <p>Yo</p>
-      {/* <GridList cellHeight={160} className={classes.gridList} cols={3}>
-        {tileData.map((tile) => (
-          <GridListTile key={tile.img} cols={tile.cols || 1}>
-            <img src={tile.img} alt={tile.title} />
-          </GridListTile>
+    <div className="img-grid">
+      {docs &&
+        docs.map((doc) => (
+          <motion.div
+            className="img-wrap"
+            key={doc.id}
+            layout
+            whileHover={{ opacity: 1 }}
+            s
+            onClick={() => setSelectedImg(doc.url)}
+          >
+            <motion.img
+              src={doc.url}
+              alt="uploaded pic"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1 }}
+            />
+          </motion.div>
         ))}
-      </GridList> */}
     </div>
   );
 }

@@ -1,0 +1,17 @@
+.tweetCommentForm {
+  form {
+    display: flex;
+    flex-direction: column;
+    border: none;
+  }
+  &__input {
+    display: flex;
+    padding: 10px;
+  }
+  input {
+    flex: 1;
+    padding: 5px;
+    font-size: 15px;
+    outline: none;
+  }
+}

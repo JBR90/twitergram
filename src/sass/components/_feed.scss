@@ -1,0 +1,20 @@
+.feed {
+  display: flex;
+  flex-direction: column;
+  border-right: $twitter-background 1px solid;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  &__header {
+    max-width: 600px;
+    position: sticky;
+    top: 0;
+    background-color: $header-background;
+    border: 1px solid $twitter-background;
+    padding: 15px 20px;
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+    }
+  }
+}

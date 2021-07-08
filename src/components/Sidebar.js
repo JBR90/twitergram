@@ -1,7 +1,7 @@
 // import "../styles/sidebar.css"
 import React, { useState } from "react";
 import SidebarOption from "./SidebarOption";
-import "../styles/Sidebar.css";
+// import "../styles/Sidebar.css";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import HomeIcon from "@material-ui/icons/Home";
 import SearchIcon from "@material-ui/icons/Search";

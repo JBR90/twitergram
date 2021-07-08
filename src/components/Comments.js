@@ -1,6 +1,6 @@
 import React from "react";
 import Comment from "./Comment";
-import "../styles/comment.css";
+// import "../styles/comment.css";
 
 const Comments = ({ comments }) => {
   //   const data = Array(comments);

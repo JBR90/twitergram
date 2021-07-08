@@ -10,6 +10,7 @@ import Login from "./components/Login";
 import PrivateRoute from "./components/PrivateRoute";
 import ForgotPassword from "./components/ForgotPassword";
 import UpdateProfile from "./components/UpdateProfile";
+import "./App.scss";
 
 function App() {
   return (

@@ -1,6 +1,6 @@
 import React from "react";
 import TwitterIcon from "@material-ui/icons/Twitter";
-import "../styles/Sidebar.css";
+// import "../styles/Sidebar.css";
 
 const NavToggle = () => {
   return (
