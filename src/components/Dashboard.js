@@ -64,10 +64,10 @@ const Dashboard = () => {
           {!showNav && <Feed />}
         </div>
         <div id="imageGrid" className="container__item">
-          {/* <ImageGrid setSelectedImg={setSelectedImg} />
+          <ImageGrid setSelectedImg={setSelectedImg} />
           {selectedImg && (
             <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
-          )} */}
+          )}
         </div>
       </div>
 

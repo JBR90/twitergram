@@ -64,7 +64,7 @@ const Post = ({
   };
 
   return (
-    <div className="post">
+    <div id={String(id)} className="post">
       <div className="post__avatar">
         <Avatar src={avatar} />
       </div>

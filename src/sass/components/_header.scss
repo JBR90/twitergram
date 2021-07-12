@@ -1,0 +1,13 @@
+.header {
+  max-width: 600px;
+  position: sticky;
+  top: 0;
+  background-color: $header-background;
+  border: 1px solid $twitter-background;
+  padding: 15px 20px;
+  z-index: 1;
+  h2 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+}

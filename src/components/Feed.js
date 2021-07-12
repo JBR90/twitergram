@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 // import "../styles/Feed.scss";
 import Post from "./Post";
+import Header from "./Header";
 import TweetBox from "./TweetBox";
 import db from "../services/firebase";
 
@@ -21,9 +22,10 @@ function Feed() {
   console.log(posts);
   return (
     <div className="feed">
-      <div className="feed__header">
+      <Header text={"Home"} />
+      {/* <div className="feed__header">
         <h2>Home</h2>
-      </div>
+      </div> */}
       <TweetBox />
 
       {posts.map((post) => (
@@ -40,6 +42,7 @@ function Feed() {
           likes={post.data.likes}
         />
       ))}
+      <div id="element_target"></div>
     </div>
   );
 }
