@@ -1,8 +1,9 @@
 .post {
   display: flex;
-  max-width: 500px;
+  // max-width: 500px;
   align-items: flex-start;
   border-bottom: 1px solid $twitter-background;
+
   &__body {
     display: flex;
     flex-direction: column;

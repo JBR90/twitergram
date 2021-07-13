@@ -7,7 +7,6 @@ const ModalHeader = ({ avatar, displayName }) => {
       <div className="modalHeader__avatar">
         <Avatar src={avatar} />
       </div>
-
       <h3>{displayName}</h3>
     </div>
   );

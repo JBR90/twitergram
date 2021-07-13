@@ -1,29 +1,37 @@
 .modal {
-  //   &__header {
-  //     border: solid black;
-  //     display: flex;
-  //     flex-direction: column;
-  //     &__avatar {
-  //       all: initial;
-  //       width: 50px;
-  //     }
-  //     &__user {
-  //     }
-  //     &__body {
-  //     }
-  //     &__text {
-  //     }
-  //     &__link {
-  //     }
-  //   }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $header-background;
+    opacity: 0.8;
+    // border: solid red;
+  }
+  &__text {
+    text-align: center;
+    padding: 10px;
+  }
+  &__link {
+    text-align: center;
+    padding: 10px;
+  }
 }
 
 .modalHeader {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  background-color: $header-background;
+  opacity: 0.8;
+  // flex-direction: row;
   // border: solid yellow;
   &__avatar {
-    border: solid blue;
+    width: fit-content;
+  }
+  h3 {
+    text-align: center;
+    width: fit-content;
+
+    padding-left: 10px;
   }
 }
 
@@ -57,7 +65,7 @@
   }
 }
 
-.modal__avatar {
-  border: soild yellow;
-  width: 30px;
-}
+// .modal__avatar {
+//   border: soild yellow;
+//   width: 30px;
+// }

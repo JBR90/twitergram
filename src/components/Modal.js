@@ -26,6 +26,7 @@ const Modal = ({ setSelectedImg, selectedImg }) => {
     }
   };
 
+  console.log(selectedImg.data.image);
   return (
     <div className="modal">
       <motion.div
@@ -47,12 +48,14 @@ const Modal = ({ setSelectedImg, selectedImg }) => {
 
             {/* <h1 className="modal__user">{selectedImg.data.displayName}</h1> */}
           </div>
-          <motion.img
-            src={selectedImg.data.image}
-            alt="enlarged pic"
-            initial={{ y: "-100vh" }}
-            animate={{ y: 0 }}
-          />
+          {selectedImg.data.image !== "" ? (
+            <motion.img
+              src={selectedImg.data.image}
+              alt="enlarged pic"
+              initial={{ y: "-100vh" }}
+              animate={{ y: 0 }}
+            />
+          ) : null}
           <div className="modal__body">
             <p className="modal__text">{selectedImg.data.text}</p>
             <a

@@ -3,6 +3,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 10px;
+  padding: 10px;
   &__wrap {
     overflow: hidden;
     height: 0;
@@ -17,6 +18,24 @@
       position: absolute;
       top: 0;
       left: 0;
+    }
+  }
+  &__noPhotoText {
+    width: 100%;
+    height: 100%;
+    // background-color: red;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      height: 500px;
+      text-align: center;
+      padding: 10px;
+      :hover {
+        opacity: 0.8;
+      }
     }
   }
 }

@@ -14,6 +14,9 @@
     border: solid, black;
     z-index: 300;
     visibility: hidden;
+    @include respond(phone) {
+      visibility: visible;
+    }
   }
 }
 
@@ -63,9 +66,9 @@
 // }
 
 @media screen and (max-width: 600px) {
-  .dashboard__twitterIcon {
-    visibility: visible;
-  }
+  // .dashboard__twitterIcon {
+  //   visibility: visible;
+  // }
 
   #sidebar {
     position: fixed;
