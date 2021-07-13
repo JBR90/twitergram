@@ -30,6 +30,22 @@
   &__item::-webkit-scrollbar {
     display: none;
   }
+  @include respond(tab-land) {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+  }
+  @include respond(phone) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+
+#sidebar {
+  @include respond(phone) {
+    position: fixed;
+    display: none;
+  }
 }
 
 #showSideBar {
@@ -38,61 +54,8 @@
   background-color: white;
 }
 
-// .navToggle {
-//   position: fixed;
-//   align-content: center;
-//   z-index: 1;
-//   /* border: solid black; */
-//   &__twitterIcon {
-//     color: var(--twitter-color);
-//     font-size: 30px !important;
-//     margin-left: 20px;
-//     margin-top: 10px;
-//     /* margin-left: 20px;
-//     margin-bottom: 20px; */
-//   }
-// }
-
-// .dashboard__twitterIcon {
-//   position: fixed;
-//   margin: 20px;
-//   color: var(--twitter-color);
-//   font-size: 30px !important;
-//   /* margin-left: 20px; */
-//   margin-bottom: 20px;
-//   border: solid, black;
-//   z-index: 300;
-//   visibility: hidden;
-// }
-
-@media screen and (max-width: 600px) {
-  // .dashboard__twitterIcon {
-  //   visibility: visible;
-  // }
-
-  #sidebar {
-    position: fixed;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  #imageGrid {
+#imageGrid {
+  @include respond(tab-land) {
     display: none;
-  }
-  .container {
-    display: grid;
-    grid-template-columns: 200px 1fr;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  #sidebar {
-    display: none;
-  }
-
-  .container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
   }
 }
