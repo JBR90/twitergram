@@ -6,7 +6,6 @@ import Header from "./Header";
 export default function ImageGrid({ setSelectedImg }) {
   const { docs } = useFirestore("posts");
   const colors = ["red", "green", "blue", "orange", "yellow"];
-  console.log("this is docs", docs);
 
   return (
     <>

@@ -1,45 +1,30 @@
-import React, { useEffect, useState } from "react";
-// import "../styles/Feed.scss";
 import Post from "./Post";
 import Header from "./Header";
 import TweetBox from "./TweetBox";
-import db from "../services/firebase";
+
+import useFirestore from "../hooks/useFirestore";
 
 function Feed() {
-  const [posts, setPosts] = useState([]);
+  const { docs } = useFirestore("posts");
 
-  useEffect(() => {
-    const postsRef = db.collection("posts");
-    postsRef.orderBy("createdAt", "desc").onSnapshot((snapshot) => {
-      setPosts(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() })));
-      console.log("triggered");
-      // snapshot.forEach((doc) => {
-      //   console.log(doc.id, "=>", doc.data());
-      // });
-    });
-  }, []);
-
-  console.log(posts);
   return (
     <div className="feed">
       <Header text={"Feed"} />
-      {/* <div className="feed__header">
-        <h2>Home</h2>
-      </div> */}
+
       <TweetBox />
 
-      {posts.map((post) => (
+      {docs.map((doc) => (
         <Post
-          id={post.id}
-          key={post.id}
-          displayName={post.data.displayName}
-          username={post.data.username}
-          verified={post.data.verified}
-          text={post.data.text}
-          avatar={post.data.avatar}
-          image={post.data.image}
-          comments={post.data.comments}
-          likes={post.data.likes}
+          id={doc.id}
+          key={doc.id}
+          displayName={doc.data.displayName}
+          username={doc.data.username}
+          verified={doc.data.verified}
+          text={doc.data.text}
+          avatar={doc.data.avatar}
+          image={doc.data.image}
+          comments={doc.data.comments}
+          likes={doc.data.likes}
         />
       ))}
       <div id="element_target"></div>
