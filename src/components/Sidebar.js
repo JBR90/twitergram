@@ -13,29 +13,40 @@ import PermIdentityIcon from "@material-ui/icons/PermIdentity";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 import { Button } from "@material-ui/core";
 
-const Sidebar = () => {
-  const [showNav, setShowNav] = useState(true);
-
+const Sidebar = ({ setDisplay }) => {
   return (
     <div className="sidebar">
-      {/* <TwitterIcon
-        onClick={(e) => setShowNav(!showNav)}
-        className="sidebar__twitterIcon"
-      /> */}
-
       <div className="nav">
-        <SidebarOption Icon={HomeIcon} text="Home" active={true} />
-        <SidebarOption Icon={SearchIcon} text="Explore" />
-        <SidebarOption Icon={NotificationsNoneIcon} text="Notifications" />
-        <SidebarOption Icon={MailOutlineIcon} text="Messages" />
-        <SidebarOption Icon={BookmarkBorderIcon} text="Bookmarks" />
-        <SidebarOption Icon={ListAltIcon} text="Lists" />
-        <SidebarOption Icon={PermIdentityIcon} text="Profile" />
-        <SidebarOption Icon={MoreHorizIcon} text="More" />
-
-        <Button variant="outlined" className="sidebar__tweet" fullWidth>
-          tweet
-        </Button>
+        <SidebarOption
+          Icon={HomeIcon}
+          text="Home"
+          setDisplay={setDisplay}
+          active={true}
+        />
+        {/* <SidebarOption Icon={SearchIcon} text="Explore" /> */}
+        <SidebarOption
+          Icon={NotificationsNoneIcon}
+          text="Notifications"
+          setDisplay={setDisplay}
+        />
+        <SidebarOption
+          Icon={MailOutlineIcon}
+          text="Messages"
+          setDisplay={setDisplay}
+        />
+        {/* <SidebarOption Icon={BookmarkBorderIcon} text="Bookmarks" /> */}
+        {/* <SidebarOption Icon={ListAltIcon} text="Lists" /> */}
+        <SidebarOption
+          Icon={PermIdentityIcon}
+          text="Profile"
+          setDisplay={setDisplay}
+        />
+        <SidebarOption
+          Icon={PermIdentityIcon}
+          text="Logout"
+          setDisplay={setDisplay}
+        />
+        {/* <SidebarOption Icon={MoreHorizIcon} text="More" /> */}
       </div>
     </div>
   );

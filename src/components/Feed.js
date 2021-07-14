@@ -22,7 +22,7 @@ function Feed() {
   console.log(posts);
   return (
     <div className="feed">
-      <Header text={"Home"} />
+      <Header text={"Feed"} />
       {/* <div className="feed__header">
         <h2>Home</h2>
       </div> */}

@@ -30,6 +30,17 @@
   &__item::-webkit-scrollbar {
     display: none;
   }
+  &__gridFeedBtn {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    top: 20px;
+    // margin-left: auto;
+    // margin-right: auto;
+
+    z-index: 1000;
+  }
   @include respond(tab-land) {
     display: grid;
     grid-template-columns: 200px 1fr;
@@ -54,8 +65,30 @@
   background-color: white;
 }
 
-#imageGrid {
-  @include respond(tab-land) {
-    display: none;
-  }
+.center {
+  display: flex;
+  justify-content: center;
 }
+
+// .imageGridMedia {
+//   @include respond(tab-land) {
+//     display: none;
+//   }
+// }
+
+// .hide {
+//   display: none;
+// }
+
+// .show {
+//   display: block;
+// }
+
+// #gridFeedBtn {
+//   // display: none;
+//   position: fixed;
+// }
+
+// #showGridFeedBtn {
+//   position: fixed;
+// }

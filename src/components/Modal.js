@@ -16,7 +16,7 @@ import ModalHeader from "./ModalHeader";
 //   },
 // }));
 
-const Modal = ({ setSelectedImg, selectedImg }) => {
+const Modal = ({ setSelectedImg, selectedImg, setShowFeed, setShowGrid }) => {
   //   const classes = useStyles();
   const handleClick = (e) => {
     console.log(e.target.classList);
@@ -24,6 +24,12 @@ const Modal = ({ setSelectedImg, selectedImg }) => {
       console.log("Selected IMG", selectedImg);
       setSelectedImg(null);
     }
+  };
+
+  const handleLink = (e) => {
+    setShowGrid(false);
+    setShowFeed(true);
+    setSelectedImg(null);
   };
 
   console.log(selectedImg.data.image);
@@ -61,7 +67,7 @@ const Modal = ({ setSelectedImg, selectedImg }) => {
             <a
               className="modal__link"
               id="link"
-              onClick={(e) => setSelectedImg(null)}
+              onClick={(e) => handleLink()}
               href={`#${String(selectedImg.id)}`}
             >
               See Post

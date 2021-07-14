@@ -10,7 +10,7 @@ export default function ImageGrid({ setSelectedImg }) {
 
   return (
     <>
-      <Header text={"Gram"} />
+      <Header text={"Images"} />
       <div className="imageGrid">
         {docs &&
           docs.map((doc) => (
