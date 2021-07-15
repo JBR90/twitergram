@@ -1,0 +1,15 @@
+.notificationLikes {
+  &__likedPosts {
+    display: flex;
+    padding: 10px;
+    border-bottom: solid thin $twitter-color;
+  }
+  &__post {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+
+    p {
+    }
+  }
+}

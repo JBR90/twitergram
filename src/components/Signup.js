@@ -16,6 +16,8 @@ import Container from "@material-ui/core/Container";
 
 import { useAuth } from "../contexts/AuthContext";
 import { useHistory } from "react-router-dom";
+import db from "../services/firebase";
+import firebase from "firebase";
 
 function Copyright() {
   return (
@@ -78,6 +80,14 @@ export default function SignUp() {
         usernameRef.current.value,
         profileURLRef.current.value
       );
+      const currentUser = firebase.auth().currentUser;
+
+      db.collection("users").add({
+        username: usernameRef.current.value,
+        avatar: profileURLRef.current.value,
+        id: currentUser.uid,
+        createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+      });
       history.push("/login");
     } catch {
       setError("Failed to create account");

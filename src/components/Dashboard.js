@@ -5,6 +5,7 @@ import Feed from "./Feed";
 import ImageGrid from "./ImageGrid";
 import UpdateProfile from "./UpdateProfile";
 import Home from "./Home";
+import Notifications from "./Notifications";
 import Signout from "./Signout";
 import NavToggle from "./NavToggle";
 import { makeStyles } from "@material-ui/core/styles";
@@ -109,6 +110,7 @@ const Dashboard = () => {
 
         {display === "Profile" && <UpdateProfile />}
         {display === "Logout" && <SignOut />}
+        {display === "Notifications" && <Notifications />}
       </div>
     </div>
 
