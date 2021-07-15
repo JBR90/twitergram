@@ -1,0 +1,15 @@
+.home {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  @include respond(tab-land) {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+#imageGrid {
+  @include respond(tab-land) {
+    display: none;
+  }
+}

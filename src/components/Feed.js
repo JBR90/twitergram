@@ -8,7 +8,7 @@ function Feed() {
   const { docs } = useFirestore("posts");
 
   return (
-    <div className="feed">
+    <div className="feed ">
       <Header text={"Feed"} />
 
       <TweetBox />

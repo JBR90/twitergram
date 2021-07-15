@@ -2,6 +2,14 @@ import { useState, useEffect } from "react";
 import { projectFirestore } from "../services/firebase";
 import db from "../services/firebase";
 
+// const getLikesFirestore = (user) => {
+//   const [likes, setLikes] = useState([]);
+//   useEffect(() => {
+//     const liked = likes.find((user) => user === currentUser.uid);
+//     liked ? setLikedPost(true) : setLikedPost(false);
+//   }, [currentUser, likes]);
+// };
+
 const useFirestore = (collection) => {
   const [docs, setDocs] = useState([]);
 

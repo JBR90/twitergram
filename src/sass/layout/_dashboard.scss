@@ -1,9 +1,9 @@
 .dashboard {
   height: 100vh;
-  &__container {
-    display: grid;
-    grid-template-columns: 200px 1fr 1fr;
-  }
+  // &__container {
+  //   display: grid;
+  //   grid-template-columns: 200px 1fr 1fr;
+  // }
   &__twitterIcon {
     position: fixed;
     margin: 20px;
@@ -22,7 +22,7 @@
 
 .container {
   display: grid;
-  grid-template-columns: 200px 1fr 1fr;
+  grid-template-columns: 200px 1fr;
   &__item {
     overflow-y: auto;
     max-height: 100vh;
@@ -30,17 +30,17 @@
   &__item::-webkit-scrollbar {
     display: none;
   }
-  &__gridFeedBtn {
-    position: fixed;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    top: 20px;
-    // margin-left: auto;
-    // margin-right: auto;
+  // &__gridFeedBtn {
+  //   position: fixed;
+  //   width: 100%;
+  //   display: flex;
+  //   justify-content: center;
+  //   top: 20px;
+  //   // margin-left: auto;
+  //   // margin-right: auto;
 
-    z-index: 1000;
-  }
+  //   z-index: 1000;
+  // }
   @include respond(tab-land) {
     display: grid;
     grid-template-columns: 200px 1fr;
@@ -65,10 +65,10 @@
   background-color: white;
 }
 
-.center {
-  display: flex;
-  justify-content: center;
-}
+// .center {
+//   display: flex;
+//   justify-content: center;
+// }
 
 // .imageGridMedia {
 //   @include respond(tab-land) {

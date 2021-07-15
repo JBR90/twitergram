@@ -4,6 +4,8 @@ import Sidebar from "./Sidebar";
 import Feed from "./Feed";
 import ImageGrid from "./ImageGrid";
 import UpdateProfile from "./UpdateProfile";
+import Home from "./Home";
+import Signout from "./Signout";
 import NavToggle from "./NavToggle";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
@@ -100,35 +102,13 @@ const Dashboard = () => {
         <div id={showNav ? "showSideBar" : "sidebar"}>
           <Sidebar setDisplay={setDisplay} />
         </div>
+
         {display === "Home" && (
-          <div
-            id="feed"
-            className={`container__item ${!showFeed ? "hide" : "show"}`}
-          >
-            {!showNav && <Feed />}
-          </div>
+          <Home selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
         )}
-        {display === "Home" && (
-          <div
-            id="imageGrid"
-            className={`container__item  ${!showGrid ? "hide" : null}`}
-          >
-            <ImageGrid setSelectedImg={setSelectedImg} />
-            {selectedImg && (
-              <Modal
-                selectedImg={selectedImg}
-                setSelectedImg={setSelectedImg}
-                setShowGrid={setShowGrid}
-                setShowFeed={setShowFeed}
-              />
-            )}
-          </div>
-        )}
-        {display === "Profile" && (
-          <div className="center">
-            <UpdateProfile />
-          </div>
-        )}
+
+        {display === "Profile" && <UpdateProfile />}
+        {display === "Logout" && <SignOut />}
       </div>
     </div>
 
