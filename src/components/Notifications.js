@@ -3,6 +3,7 @@ import NotificationLikes from "./NotificationLikes";
 import useFirestore from "../hooks/useFirestore";
 import { useAuth } from "../contexts/AuthContext";
 import Header from "./Header";
+import NotificationComments from "./NotificationComments";
 
 const Notifications = () => {
   //   const [nodes, setNodes] = useState({});
@@ -26,13 +27,11 @@ const Notifications = () => {
     .filter((post) => post.data.userID === currentUser.uid)
     .filter((userPost) => userPost.data.likes.length > 0);
 
-  console.log("liked postS", likedUserPosts);
+  const commentedUserPosts = docs
+    .filter((post) => post.data.userID === currentUser.uid)
+    .filter((userPost) => userPost.data.comments.length > 0);
 
-  // filter posts with likes
-  // Display post
-  // Get users from likes
-  // display users profile next to post
-
+  console.log("commented user posts", commentedUserPosts);
   return (
     <div className="notifications">
       <Header text={"Notifications"} />
@@ -51,6 +50,16 @@ const Notifications = () => {
         </div>
         <div className="notifications__comments">
           <Header text={"Comments"} />
+          {commentedUserPosts.map((post) => (
+            <NotificationComments
+              key={post.id}
+              userAvatar={post.data.avatar}
+              text={post.data.text}
+              comments={post.data.comments}
+              users={users.docs}
+              id={post.id}
+            />
+          ))}
         </div>
       </div>
     </div>

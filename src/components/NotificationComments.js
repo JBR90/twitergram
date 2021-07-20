@@ -1,11 +1,11 @@
 import React from "react";
-import NotificationLike from "./NotificationLike";
+import NotificationComment from "./NotificationComment";
 import { Avatar } from "@material-ui/core";
-import { Favorite } from "@material-ui/icons";
+import { ChatBubbleOutline } from "@material-ui/icons";
 
-const NotificationLikes = ({ userAvatar, text, likes, users }) => {
-  // console.log("likes", likes);
-  const numberOfLikes = likes.length;
+const NotificationComments = ({ userAvatar, text, comments, users, id }) => {
+  const numberOfComments = comments.length;
+  console.log("in comments", comments);
 
   return (
     <div className="notificationLikes">
@@ -17,17 +17,17 @@ const NotificationLikes = ({ userAvatar, text, likes, users }) => {
       </div>
       <div className="notificationLikes__container">
         <div className="notificationLikes__numberOfLikes">
-          <p>{numberOfLikes}</p>
-          <Favorite />
+          <p>{numberOfComments}</p>
+          <ChatBubbleOutline />
         </div>
-        {likes &&
-          likes.map((like) => (
-            <NotificationLike
+        {comments &&
+          comments.map((comment, index) => (
+            <NotificationComment
               className="notificationLikes__item"
-              key={like}
-              like={like}
+              key={index}
+              comment={comment}
               users={users}
-              numberOfLikes={numberOfLikes}
+              numberOfComments={numberOfComments}
             />
           ))}
       </div>
@@ -35,4 +35,4 @@ const NotificationLikes = ({ userAvatar, text, likes, users }) => {
   );
 };
 
-export default NotificationLikes;
+export default NotificationComments;
