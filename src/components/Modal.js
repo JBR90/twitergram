@@ -27,8 +27,8 @@ const Modal = ({ setSelectedImg, selectedImg, setShowFeed, setShowGrid }) => {
   };
 
   const handleLink = (e) => {
-    setShowGrid(false);
-    setShowFeed(true);
+    // setShowGrid(false);
+    // setShowFeed(true);
     setSelectedImg(null);
   };
 

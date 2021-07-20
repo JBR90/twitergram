@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import NotificationLikes from "./NotificationLikes";
 import useFirestore from "../hooks/useFirestore";
 import { useAuth } from "../contexts/AuthContext";
+import Header from "./Header";
 
 const Notifications = () => {
   //   const [nodes, setNodes] = useState({});
@@ -34,15 +35,24 @@ const Notifications = () => {
 
   return (
     <div className="notifications">
-      {likedUserPosts.map((post) => (
-        <NotificationLikes
-          key={post.id}
-          userAvatar={post.data.avatar}
-          text={post.data.text}
-          likes={post.data.likes}
-          users={users.docs}
-        />
-      ))}
+      <Header text={"Notifications"} />
+      <div className="notifications__container">
+        <div className="notifications__likes">
+          <Header text={"Likes"} />
+          {likedUserPosts.map((post) => (
+            <NotificationLikes
+              key={post.id}
+              userAvatar={post.data.avatar}
+              text={post.data.text}
+              likes={post.data.likes}
+              users={users.docs}
+            />
+          ))}
+        </div>
+        <div className="notifications__comments">
+          <Header text={"Comments"} />
+        </div>
+      </div>
     </div>
   );
 };
