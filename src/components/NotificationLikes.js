@@ -2,7 +2,13 @@ import React from "react";
 import NotificationLike from "./NotificationLike";
 import { Avatar } from "@material-ui/core";
 
-const NotificationLikes = ({ userAvatar, text, likes, users }) => {
+const NotificationLikes = ({
+  userAvatar,
+  text,
+  likes,
+  users,
+  numberOfLikes,
+}) => {
   return (
     <div className="notificationLikes">
       <div className="notificationLikes__likedPosts">
@@ -11,9 +17,15 @@ const NotificationLikes = ({ userAvatar, text, likes, users }) => {
         </div>
         <div className="notificationLikes__post">{text}</div>
       </div>
-      {likes.map((like) => (
-        <NotificationLike key={like} like={like} users={users} />
-      ))}
+      {likes &&
+        likes.map((like) => (
+          <NotificationLike
+            key={like}
+            like={like}
+            users={users}
+            numberOfLikes={numberOfLikes}
+          />
+        ))}
     </div>
   );
 };
