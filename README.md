@@ -2,14 +2,7 @@
 
 [live demo](https://mysterious-ravine-98142.herokuapp.com/#DDlYQ01eR4D8clYNkqpU/)
 
-A pomodoro timer and todo app. 
+A responsive social media clone with authentication, a Twitter like feed and Instagram image grid.
 
-React, Axios, Node.js, Express, Mongoose, MongoDB
+React, Firebase, Material UI, Framer Motion.
 
-# Backend
-
-https://github.com/JBR90/Pomodoro-Backend
-
-# Purpose
-
-A practice full stack app with user authentication
