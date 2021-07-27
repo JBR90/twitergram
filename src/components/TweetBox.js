@@ -1,7 +1,7 @@
 import { Avatar, button } from "@material-ui/core";
 import React, { useState } from "react";
 import db from "../services/firebase";
-// import "../styles/TweetBox.css";
+
 import firebase from "firebase/app";
 
 import { useAuth } from "../contexts/AuthContext";
@@ -32,7 +32,6 @@ const TweetBox = () => {
   };
   return (
     <div className="tweetBox">
-      {/* <h4>{`${currentUser.displayName}`}</h4> */}
       <form>
         <div className="tweetBox__input">
           <Avatar src={currentUser.photoURL} />

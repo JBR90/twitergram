@@ -5,7 +5,6 @@ import { ChatBubbleOutline } from "@material-ui/icons";
 
 const NotificationComments = ({ userAvatar, text, comments, users, id }) => {
   const numberOfComments = comments.length;
-  console.log("in comments", comments);
 
   return (
     <div className="notificationLikes">

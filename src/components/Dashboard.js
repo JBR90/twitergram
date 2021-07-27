@@ -41,18 +41,14 @@ const Dashboard = () => {
   const [showGrid, setShowGrid] = useState(true);
   const [showGridFeedBtn, setShowGridFeedBtn] = useState(false);
   const [selectedImg, setSelectedImg] = useState(null);
-  // const [toggleFeedGrid, setToggleFeedGrid] = useState(false);
-  // const [smallScreen, setSmallScreen] = useState(false);
 
   const handleMediaQueryChangeMobile = (matches) => {
     if (matches === true) {
       setShowNav(false);
-      // setIsSmallScreen(true);
     }
   };
 
   const handleMediaQueryChangeSmallScreen = (matches) => {
-    console.log("match");
     if (matches === true) {
       setShowFeed(true);
       setShowGrid(false);
@@ -61,7 +57,6 @@ const Dashboard = () => {
   };
 
   const handleMediaQueryChangeLargeScreen = (matches) => {
-    console.log("match");
     if (matches === true) {
       setShowFeed(true);
       setShowGrid(true);
@@ -70,7 +65,6 @@ const Dashboard = () => {
   };
 
   const handleSwitchFeedGrid = () => {
-    // setToggleFeedGrid(!toggleFeedGrid);
     setShowFeed(!showFeed);
     setShowGrid(!showGrid);
   };
@@ -113,69 +107,6 @@ const Dashboard = () => {
         {display === "Notifications" && <Notifications />}
       </div>
     </div>
-
-    // <div className="dashboard">
-    //   <TwitterIcon
-    //     onClick={(e) => setShowNav(!showNav)}
-    //     className="dashboard__twitterIcon"
-    //   />
-    //   <div className="container">
-    //     <div id={showNav ? "showSideBar" : "sidebar"}>
-    //       <Sidebar />
-    //     </div>
-    //     {showGridFeedBtn && (
-    //       <div className="container__gridFeedBtn">
-    //         <button onClick={(e) => handleSwitchFeedGrid()}>
-    //           Twitter/Gram
-    //         </button>
-    //       </div>
-    //     )}
-
-    //     <div
-    //       id="feed"
-    //       className={`container__item ${!showFeed ? "hide" : "show"}`}
-    //     >
-    //       {!showNav && <Feed />}
-    //     </div>
-    //     <div
-    //       // id="imageGrid"
-    //       className={`container__item  ${!showGrid ? "hide" : null}`}
-    //     >
-    //       <ImageGrid setSelectedImg={setSelectedImg} />
-    //       {selectedImg && (
-    //         <Modal
-    //           selectedImg={selectedImg}
-    //           setSelectedImg={setSelectedImg}
-    //           setShowGrid={setShowGrid}
-    //           setShowFeed={setShowFeed}
-    //         />
-    //       )}
-    //     </div>
-    //   </div>
-
-    // {/* <div className={classes.root}>
-    //   <Grid container spacing={3}>
-    //     <Grid style={{ maxHeight: "100vh", overflow: "auto" }} item xs>
-    //       <Feed />
-    //     </Grid> */}
-    // {/* <Grid item xs>
-    //       <ImageGrid />
-    //     </Grid> */}
-    // {/* </Grid>
-    // </div> */}
-    //     {/* <div className="navToggle">
-    //       <NavToggle />
-    //     </div> */}
-    //     {/* <div className="dashboard"> */}
-    //     {/* {showNav && <Sidebar />} */}
-    //     {/* <Grid style={{ maxHeight: "100vh", overflow: "auto" }}>
-    //         <Feed />
-    //       </Grid> */}
-    //     {/* <Feed /> */}
-    //     {/* <ImageGrid /> */}
-    //     // {display === "Home" && <Feed />}
-    //     {/* </div> */}
-    //   // </div>
   );
 };
 

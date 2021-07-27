@@ -23,12 +23,10 @@ export function AuthProvider({ children }) {
   };
 
   const login = async (email, password) => {
-    console.log("im in", currentUser);
     return await auth.signInWithEmailAndPassword(email, password);
   };
 
   const logout = () => {
-    console.log("im out");
     return auth.signOut();
   };
 

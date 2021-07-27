@@ -1,7 +1,6 @@
-// import "../styles/sidebar.css"
 import React, { useState } from "react";
 import SidebarOption from "./SidebarOption";
-// import "../styles/Sidebar.css";
+
 import TwitterIcon from "@material-ui/icons/Twitter";
 import HomeIcon from "@material-ui/icons/Home";
 import SearchIcon from "@material-ui/icons/Search";
@@ -23,7 +22,7 @@ const Sidebar = ({ setDisplay }) => {
           setDisplay={setDisplay}
           active={true}
         />
-        {/* <SidebarOption Icon={SearchIcon} text="Explore" /> */}
+
         <SidebarOption
           Icon={NotificationsNoneIcon}
           text="Notifications"
@@ -34,8 +33,7 @@ const Sidebar = ({ setDisplay }) => {
           text="Messages"
           setDisplay={setDisplay}
         />
-        {/* <SidebarOption Icon={BookmarkBorderIcon} text="Bookmarks" /> */}
-        {/* <SidebarOption Icon={ListAltIcon} text="Lists" /> */}
+
         <SidebarOption
           Icon={PermIdentityIcon}
           text="Profile"
@@ -46,7 +44,6 @@ const Sidebar = ({ setDisplay }) => {
           text="Logout"
           setDisplay={setDisplay}
         />
-        {/* <SidebarOption Icon={MoreHorizIcon} text="More" /> */}
       </div>
     </div>
   );

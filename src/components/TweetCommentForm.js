@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import "../styles/TweetComments.css";
+
 import { useAuth } from "../contexts/AuthContext";
 import db from "../services/firebase";
 import firebase from "firebase/app";
@@ -21,8 +21,6 @@ const TweetCommentForm = ({ id }) => {
     try {
       const getTweet = db.collection("posts").doc(id);
 
-      console.log(id);
-      // db.collection("posts").doc(id).update(tweetCommentObject);
       const res = getTweet.update({
         comments: firebase.firestore.FieldValue.arrayUnion({
           comment: tweetComment,
@@ -31,14 +29,8 @@ const TweetCommentForm = ({ id }) => {
           displayName: currentUser.displayName,
         }),
       });
+    } catch (err) {}
 
-      console.log(res);
-      // console.log(getTweet);
-    } catch (err) {
-      console.log(err);
-    }
-
-    console.log(tweetCommentObject);
     setTweetComment("");
   };
 

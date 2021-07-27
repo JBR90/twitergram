@@ -28,8 +28,6 @@ const Post = ({
   id,
   likes,
 }) => {
-  // console.log("this is id in post", id);
-  // console.log("this is comments in post", comments);
   const [showComments, setShowComments] = useState(false);
   const [likedPost, setLikedPost] = useState(false);
   const { currentUser, login, resetPassword } = useAuth();

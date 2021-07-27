@@ -4,7 +4,6 @@ import { Avatar } from "@material-ui/core";
 import { Favorite } from "@material-ui/icons";
 
 const NotificationLikes = ({ userAvatar, text, likes, users }) => {
-  // console.log("likes", likes);
   const numberOfLikes = likes.length;
 
   return (

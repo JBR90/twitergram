@@ -1,6 +1,6 @@
 import React from "react";
 import { Avatar } from "@material-ui/core";
-// import "../styles/comment.css";
+
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Comment = ({ comment, photoURL, displayName }) => {
   const classes = useStyles();
-  console.log("in comment", comment);
+
   return (
     <div className="comment">
       <div className="comment__avatar">

@@ -13,7 +13,7 @@ import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
-// import { Link } from "react-router-dom";
+
 import { link, useHistory } from "react-router-dom";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 
@@ -22,9 +22,8 @@ import { useAuth } from "../contexts/AuthContext";
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
-      {"Copyright © "}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
+      <Link color="inherit" href="https://github.com/JBR90/CV">
+        JBR GitHub
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
@@ -62,9 +61,6 @@ export default function SignOut() {
 
   const handleLogout = async (e) => {
     e.preventDefault();
-    // setError("");
-    console.log("logout");
-    console.log(currentUser);
 
     try {
       setError("");

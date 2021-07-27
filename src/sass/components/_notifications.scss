@@ -8,6 +8,7 @@
 .notificationLikes {
   &__likedPosts {
     display: flex;
+    border: 1px solid $twitter-background;
 
     padding: 10px;
     // border-bottom: solid thin $twitter-color;

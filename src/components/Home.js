@@ -9,19 +9,10 @@ const Home = ({ selectedImg, setSelectedImg }) => {
       <div className="container__item">
         <Feed />
       </div>
-      <div
-        id="imageGrid"
-        // className={`container__item  ${!showGrid ? "hide" : null}`}
-        className={`container__item `}
-      >
+      <div id="imageGrid" className={`container__item `}>
         <ImageGrid setSelectedImg={setSelectedImg} />
         {selectedImg && (
-          <Modal
-            selectedImg={selectedImg}
-            setSelectedImg={setSelectedImg}
-            // setShowGrid={setShowGrid}
-            // setShowFeed={setShowFeed}
-          />
+          <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
         )}
       </div>
     </div>
