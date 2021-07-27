@@ -8,9 +8,9 @@ React, Firebase, Material UI, Framer Motion.
 
 # Features
 
-User authentication
-'Tweet' post or image
-Comment on post
-like a post
-See comment and like notifications
+- User authentication
+- 'Tweet' post or image
+- Comment on post
+- like a post
+- See comment and like notifications
 
