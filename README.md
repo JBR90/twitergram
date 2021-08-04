@@ -2,7 +2,7 @@
 
 [live demo](https://mysterious-ravine-98142.herokuapp.com/#DDlYQ01eR4D8clYNkqpU/)
 
-- test account:
+Test account:
 - Username : user5
 - Password : password
 
