@@ -18,3 +18,12 @@ React, Firebase, Material UI, Framer Motion.
 - like a post
 - See comment and like notifications
 
+# Improvements / todo
+-Reorganise components into related folders
+-Refactor firebase code from components into hooks and service helper functions
+-Implement messaging page
+-Improve layout of notifications - add link to posts / image thumbnails
+-Remove old server code
+-Change all styling to SASS
+
+
