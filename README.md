@@ -19,7 +19,7 @@ React, Firebase, Material UI, Framer Motion.
 - See comment and like notifications
 
 # Improvements / todo
-- Reorganise components into related folders
+- landing page
 - Refactor firebase code from components into hooks and service helper functions
 - Implement messaging page
 - Finish notifications feature - add link to posts / image thumbnails
