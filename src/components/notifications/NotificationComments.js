@@ -1,6 +1,6 @@
 import React from "react";
 import NotificationComment from "./NotificationComment";
-import { Avatar } from "@material-ui/core";
+
 import { ChatBubbleOutline } from "@material-ui/icons";
 
 const NotificationComments = ({ userAvatar, text, comments, users, id }) => {
@@ -10,7 +10,7 @@ const NotificationComments = ({ userAvatar, text, comments, users, id }) => {
     <div className="notificationLikes">
       <div className="notificationLikes__likedPosts">
         <div className="notficationLikes__userAvatar">
-          <Avatar src={userAvatar} />
+          {/* <Avatar src={userAvatar} /> */}
         </div>
         <div className="notificationLikes__post">{text}</div>
       </div>

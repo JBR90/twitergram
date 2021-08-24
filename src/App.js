@@ -1,15 +1,13 @@
 import "./App.css";
-import Sidebar from "./components/Sidebar";
-import TweetBox from "./components/TweetBox";
-import Feed from "./components/Feed";
-import Signup from "./components/Signup";
+
+import Signup from "./components/auth/Signup";
 import { AuthProvider } from "./contexts/AuthContext";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Dashboard from "./components/Dashboard";
-import Login from "./components/Login";
-import PrivateRoute from "./components/PrivateRoute";
-import ForgotPassword from "./components/ForgotPassword";
-import UpdateProfile from "./components/UpdateProfile";
+import Dashboard from "./components/pages/Dashboard";
+import Login from "./components/auth/Login";
+import PrivateRoute from "./components/router/PrivateRoute";
+import ForgotPassword from "./components/auth/ForgotPassword";
+import UpdateProfile from "./components/auth/UpdateProfile";
 import "./App.scss";
 
 function App() {
