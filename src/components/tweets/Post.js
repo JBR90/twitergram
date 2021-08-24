@@ -10,12 +10,11 @@ import {
 } from "@material-ui/icons";
 // import "../styles/Post.css";
 import firebase from "firebase/app";
-import db from "../services/firebase";
+import db from "../../services/firebase";
 
-import ToogleComponent from "./ToggleComponent";
-import TweetCommentForm from "./TweetCommentForm";
-import Comments from "./Comments";
-import { useAuth } from "../contexts/AuthContext";
+import TweetCommentForm from "../tweets/TweetCommentForm";
+import Comments from "../comments/Comments";
+import { useAuth } from "../../contexts/AuthContext";
 
 const Post = ({
   displayName,

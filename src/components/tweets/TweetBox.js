@@ -1,10 +1,10 @@
 import { Avatar, button } from "@material-ui/core";
 import React, { useState } from "react";
-import db from "../services/firebase";
+import db from "../../services/firebase";
 
 import firebase from "firebase/app";
 
-import { useAuth } from "../contexts/AuthContext";
+import { useAuth } from "../../contexts/AuthContext";
 
 const TweetBox = () => {
   const [tweetMessage, setTweetMessage] = useState("");

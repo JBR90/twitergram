@@ -1,7 +1,7 @@
 import React from "react";
-import ImageGrid from "./ImageGrid";
-import Feed from "./Feed";
-import Modal from "./Modal";
+import ImageGrid from "../imageGrid/ImageGrid";
+import Feed from "../tweets/Feed";
+import Modal from "../imageGrid/Modal";
 
 const Home = ({ selectedImg, setSelectedImg }) => {
   return (

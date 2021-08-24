@@ -16,7 +16,7 @@ import Container from "@material-ui/core/Container";
 // import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 
-import { useAuth } from "../contexts/AuthContext";
+import { useAuth } from "../../contexts/AuthContext";
 
 const useStyles = makeStyles((theme) => ({
   paper: {

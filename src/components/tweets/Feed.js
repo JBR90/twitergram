@@ -1,8 +1,8 @@
-import Post from "./Post";
-import Header from "./Header";
-import TweetBox from "./TweetBox";
+import Post from "../tweets/Post";
+import Header from "../Header";
+import TweetBox from "../tweets/TweetBox";
 
-import useFirestore from "../hooks/useFirestore";
+import useFirestore from "../../hooks/useFirestore";
 
 function Feed() {
   const { docs } = useFirestore("posts");

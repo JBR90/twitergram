@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import ModalHeader from "./ModalHeader";
+import ModalHeader from "../imageGrid/ModalHeader";
 
 const Modal = ({ setSelectedImg, selectedImg, setShowFeed, setShowGrid }) => {
   const handleClick = (e) => {

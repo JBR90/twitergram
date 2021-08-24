@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import NotificationLikes from "./NotificationLikes";
-import useFirestore from "../hooks/useFirestore";
-import { useAuth } from "../contexts/AuthContext";
-import Header from "./Header";
-import NotificationComments from "./NotificationComments";
+import NotificationLikes from "../notifications/NotificationLikes";
+import useFirestore from "../../hooks/useFirestore";
+import { useAuth } from "../../contexts/AuthContext";
+import Header from "../Header";
+import NotificationComments from "../notifications/NotificationComments";
 
 const Notifications = () => {
   const users = useFirestore("users");

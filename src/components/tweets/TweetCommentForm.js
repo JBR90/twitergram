@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-import { useAuth } from "../contexts/AuthContext";
-import db from "../services/firebase";
+import { useAuth } from "../../contexts/AuthContext";
+import db from "../../services/firebase";
 import firebase from "firebase/app";
 
 const TweetCommentForm = ({ id }) => {

@@ -1,5 +1,5 @@
 import React from "react";
-import useFirestore from "../hooks/useFirestore";
+import useFirestore from "../../hooks/useFirestore";
 import { Avatar } from "@material-ui/core";
 import Tooltip from "@material-ui/core/Tooltip";
 

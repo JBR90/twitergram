@@ -1,5 +1,5 @@
 import React from "react";
-import NotificationLike from "./NotificationLike";
+import NotificationLike from "../notifications/NotificationLike";
 import { Avatar } from "@material-ui/core";
 import { Favorite } from "@material-ui/icons";
 

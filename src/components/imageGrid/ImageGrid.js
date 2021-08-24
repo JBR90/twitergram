@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import useFirestore from "../hooks/useFirestore";
-import Header from "./Header";
+import useFirestore from "../../hooks/useFirestore";
+import Header from "../Header";
 const colors = ["red", "green", "blue", "orange", "yellow"];
 
 export default function ImageGrid({ setSelectedImg }) {

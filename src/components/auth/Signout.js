@@ -17,7 +17,7 @@ import Container from "@material-ui/core/Container";
 import { link, useHistory } from "react-router-dom";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 
-import { useAuth } from "../contexts/AuthContext";
+import { useAuth } from "../../contexts/AuthContext";
 
 function Copyright() {
   return (
