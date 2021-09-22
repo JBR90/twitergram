@@ -5,7 +5,7 @@ A work in progress responsive social media clone with authentication, a Twitter 
 [live demo](https://mysterious-ravine-98142.herokuapp.com/#DDlYQ01eR4D8clYNkqpU/)
 
 Test account:
-- Username : user5
+- Username : user5@user5.com
 - Password : password
 
 
